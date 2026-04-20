@@ -19,15 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.querySelectorAll('a').forEach(link => {
+            link.style.display = 'inline-block';
+            link.style.transition = 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+
             link.addEventListener('mouseenter', () => {
                 cursorOutline.style.width = '60px';
                 cursorOutline.style.height = '60px';
-                cursorOutline.style.backgroundColor = 'rgba(232, 122, 93, 0.1)';
+                cursorOutline.style.backgroundColor = 'rgba(37, 99, 235, 0.1)';
             });
+
+            link.addEventListener('mousemove', (e) => {
+                const rect = link.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                link.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
             link.addEventListener('mouseleave', () => {
                 cursorOutline.style.width = '40px';
                 cursorOutline.style.height = '40px';
                 cursorOutline.style.backgroundColor = 'transparent';
+                link.style.transform = 'translate(0px, 0px)';
             });
         });
     }
