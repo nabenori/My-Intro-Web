@@ -1,10 +1,10 @@
 /* Awwwards Style High-end CSS */
 :root {
-    --bg-main: #f8f9fa;
-    --text-main: #1a1a1a;
-    --text-dim: #666666;
-    --accent: #10b981; /* Emerald Green */
-    --accent-alpha: rgba(16, 185, 129, 0.5);
+    --bg-main: #f0f4f8; /* Chic light blue-grey */
+    --text-main: #0f172a; /* Slate 900 */
+    --text-dim: #475569; /* Slate 600 */
+    --accent: #2563eb; /* Royal Blue */
+    --accent-alpha: rgba(37, 99, 235, 0.5);
     --font-en: 'Inter', sans-serif;
     --font-jp: 'Noto Sans JP', sans-serif;
 }
